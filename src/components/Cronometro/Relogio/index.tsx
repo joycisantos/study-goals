@@ -4,7 +4,7 @@ interface Props {
   tempo: number | undefined
 }
 
-export default function Relogio({ tempo = 0 }) {
+export default function Relogio({ tempo = 0 }: Props) {
   const minutos = Math.floor(tempo / 60);
   const segundos = tempo % 60;
   const [minutoDezena, minutoUnidade] = String(minutos).padStart(2, '0');

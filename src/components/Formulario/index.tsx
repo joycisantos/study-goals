@@ -13,7 +13,7 @@ function Formulario({ setTarefas }: Props) {
   const [tempo, setTempo] = useState("00:00");
   function adicionarTarefa(evento: React.FormEvent<HTMLFormElement>) {
     evento.preventDefault();
-    setTarefas(tarefasAntigas =>
+    setTarefas(tarefasAntigas => 
       [
         ...tarefasAntigas,
         {
@@ -38,10 +38,10 @@ function Formulario({ setTarefas }: Props) {
         <input
           type="text"
           name="tarefa"
+          id="tarefa"
           value={tarefa}
           onChange={evento => setTarefa(evento.target.value)}
-          id="tarefa"
-          placeholder="O que você quer estudar?"
+          placeholder="O que você quer estudar"
           required
         />
       </div>
